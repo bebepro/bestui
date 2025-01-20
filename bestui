@@ -56,7 +56,7 @@ local theme = {
     textcolor = Color3.fromRGB(255, 155, 255),
     textborder = Color3.fromRGB(0, 70, 0),
     cursoroutline = Color3.fromRGB(43, 100, 120),
-    font = 2,
+    font = 0,
     textsize = 23
 }
 -- // Utility Functions
@@ -1057,13 +1057,13 @@ do
         });page["page_button"] = page_button
         --
         local page_button_inline = utility:Create("Frame", {Vector2.new(1,1), page_button}, {
-            Size = utility:Size(1, -2, 1, -1, page_button),
+            Size = utility:Size(10, -20, 10, -10, page_button),
             Position = utility:Position(0, 1, 0, 1, page_button),
             Color = theme.inline
         });page["page_button_inline"] = page_button_inline
         --
         local page_button_color = utility:Create("Frame", {Vector2.new(1,1), page_button_inline}, {
-            Size = utility:Size(1, -2, 1, -1, page_button_inline),
+            Size = utility:Size(10, -20, 10, -10, page_button_inline),
             Position = utility:Position(0, 1, 0, 1, page_button_inline),
             Color = theme.dark_contrast
         });page["page_button_color"] = page_button_color
