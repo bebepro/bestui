@@ -49,15 +49,15 @@ local sections = {}
 --local themes = {}
 local theme = {
     accent = Color3.fromRGB(255, 0, 255),
-    light_contrast = Color3.fromRGB(30, 31, 235),
-    dark_contrast = Color3.fromRGB(10, 250, 210),
+    light_contrast = Color3.fromRGB(30, 30, 30),
+    dark_contrast = Color3.fromRGB(20, 20, 20),
     outline = Color3.fromRGB(0, 0, 0),
     inline = Color3.fromRGB(50, 50, 50),
-    textcolor = Color3.fromRGB(255, 155, 255),
-    textborder = Color3.fromRGB(0, 70, 0),
-    cursoroutline = Color3.fromRGB(43, 100, 120),
-    font = 0,
-    textsize = 23
+    textcolor = Color3.fromRGB(255, 255, 255),
+    textborder = Color3.fromRGB(0, 0, 0),
+    cursoroutline = Color3.fromRGB(10, 10, 10),
+    font = 1,
+    textsize = 13
 }
 -- // Utility Functions
 do
@@ -106,14 +106,14 @@ do
             frame.Filled = true
             frame.Thickness = 0
             frame.Color = Color3.fromRGB(255,255,255)
-            frame.Size = Vector2.new(200,200)
+            frame.Size = Vector2.new(100,100)
             frame.Position = Vector2.new(0,0)
             frame.ZIndex = 50
             frame.Transparency = library.shared.initialized and 1 or 0
             instance = frame
         elseif instanceType == "TextLabel" or instanceType == "textlabel" then
             local text = Drawing.new("Text")
-            text.Font = 2
+            text.Font = 1
             text.Visible = true
             text.Outline = true
             text.Center = false
@@ -1057,13 +1057,13 @@ do
         });page["page_button"] = page_button
         --
         local page_button_inline = utility:Create("Frame", {Vector2.new(1,1), page_button}, {
-            Size = utility:Size(10, -20, 10, -10, page_button),
+            Size = utility:Size(1, -2, 1, -1, page_button),
             Position = utility:Position(0, 1, 0, 1, page_button),
             Color = theme.inline
         });page["page_button_inline"] = page_button_inline
         --
         local page_button_color = utility:Create("Frame", {Vector2.new(1,1), page_button_inline}, {
-            Size = utility:Size(10, -20, 10, -10, page_button_inline),
+            Size = utility:Size(1, -2, 1, -1, page_button_inline),
             Position = utility:Position(0, 1, 0, 1, page_button_inline),
             Color = theme.dark_contrast
         });page["page_button_color"] = page_button_color
