@@ -49,15 +49,15 @@ local sections = {}
 --local themes = {}
 local theme = {
     accent = Color3.fromRGB(255, 0, 255),
-    light_contrast = Color3.fromRGB(30, 30, 30),
-    dark_contrast = Color3.fromRGB(20, 20, 20),
-    outline = Color3.fromRGB(10, 10, 10),
-    inline = Color3.fromRGB(250, 150, 20),
-    textcolor = Color3.fromRGB(255, 255, 255),
-    textborder = Color3.fromRGB(10, 120, 230),
-    cursoroutline = Color3.fromRGB(120, 120, 120),
-    font = 3,
-    textsize = 28
+    light_contrast = Color3.fromRGB(30, 31, 235),
+    dark_contrast = Color3.fromRGB(10, 250, 210),
+    outline = Color3.fromRGB(0, 0, 0),
+    inline = Color3.fromRGB(50, 50, 50),
+    textcolor = Color3.fromRGB(255, 155, 255),
+    textborder = Color3.fromRGB(0, 70, 0),
+    cursoroutline = Color3.fromRGB(43, 100, 120),
+    font = 2,
+    textsize = 23
 }
 -- // Utility Functions
 do
@@ -106,14 +106,14 @@ do
             frame.Filled = true
             frame.Thickness = 0
             frame.Color = Color3.fromRGB(255,255,255)
-            frame.Size = Vector2.new(100,100)
+            frame.Size = Vector2.new(200,200)
             frame.Position = Vector2.new(0,0)
             frame.ZIndex = 50
             frame.Transparency = library.shared.initialized and 1 or 0
             instance = frame
         elseif instanceType == "TextLabel" or instanceType == "textlabel" then
             local text = Drawing.new("Text")
-            text.Font = 1
+            text.Font = 2
             text.Visible = true
             text.Outline = true
             text.Center = false
